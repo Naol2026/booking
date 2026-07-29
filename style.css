@@ -456,6 +456,21 @@ padding:25px;
 
 }
 
+
+button {
+    transition: all 0.3s ease;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#msg {
+    min-height: 24px; /* Prevents layout jump */
+}
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media Screen and (max-width: 320px){
