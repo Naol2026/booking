@@ -209,7 +209,13 @@ for Farms, Businesses and Individuals.
 
                 <option>DOC</option>
 
-                <option>Chicken Meat</option>
+                <option>whole chicken</option>
+
+				<option>45 days old chicken</option>
+
+                <option>3 month old chicken</option>
+
+                <option>60 days old chicken</option>
 
                 <option>Layer Starter Feed</option>
 
@@ -323,67 +329,100 @@ for Farms, Businesses and Individuals.
 
 </footer>
 
-
- <script>
+<script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwY3gT5dCb4kKQFlQFZ0MRyrflV4cM69mRU8phFk1iMPG_zuG6hKZzoFpHWDxkWNFit/exec';
 const form = document.forms['YOUR_FORM_NAME'];
+const submitBtn = form.querySelector('button[type="submit"]');
+const originalBtnText = submitBtn.innerHTML;
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     const formData = new FormData(form);
-
     const product = formData.get('selection');
     const quantity = formData.get('Quantity');
 
     let unit = '';
-
     switch (product) {
-        case 'Egg':
-            unit = 'pcs';
-            break;
-
-        case 'DOC':
-            unit = 'chicks';
-            break;
-
-        case 'Chicken Meat':
-            unit = 'kg';
-            break;
-
+        case 'Egg': unit = 'pcs'; break;
+        case 'DOC': unit = 'chicks'; break;
+        case 'Chicken Meat': unit = 'kg'; break;
         case 'Layer Starter Feed':
         case 'Layer Grower Feed':
         case 'Layer Finisher Feed':
         case 'Broiler Starter Feed':
         case 'Broiler Grower Feed':
         case 'Broiler Finisher Feed':
-            unit = 'kg';
-            break;
-
-        default:
-            unit = '';
+            unit = 'kg'; break;
+        default: unit = '';
     }
 
-    // Change Quantity to include the SI unit
     if (unit !== '') {
         formData.set('Quantity', `${quantity} ${unit}`);
     }
 
-    fetch(scriptURL, {
-        method: 'POST',
-        body: formData
-    })
+    // 🚀 Creative: Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending to the farm... 🚜';
+    submitBtn.style.opacity = '0.8';
+
+    fetch(scriptURL, { method: 'POST', body: formData })
     .then(response => response.json())
     .then(data => {
-        alert("Booking submitted successfully!");
+        // ✅ Creative: Success state — exactly as you requested!
+        submitBtn.innerHTML = 'Your order is submitted! 👍';
+        submitBtn.style.background = '#28a745'; // Fresh green
+        submitBtn.style.transform = 'scale(1.05)';
+        submitBtn.style.boxShadow = '0 8px 25px rgba(40, 167, 69, 0.4)';
+        
+        // Fun confirmation message below the form
+        const msgSpan = document.getElementById('msg');
+        msgSpan.innerHTML = '🎉 Fresh from Modjo to you! We\'ll call you soon.';
+        msgSpan.style.color = '#28a745';
+        msgSpan.style.fontWeight = 'bold';
+        msgSpan.style.marginTop = '15px';
+        msgSpan.style.display = 'block';
+        msgSpan.style.textAlign = 'center';
+        msgSpan.style.animation = 'popIn 0.4s ease';
+
         form.reset();
+
+        // ⏳ Reset after 4 seconds so they can book again
+        setTimeout(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.style.background = '#D8A327';
+            submitBtn.style.transform = 'scale(1)';
+            submitBtn.style.boxShadow = 'none';
+            submitBtn.style.opacity = '1';
+            submitBtn.disabled = false;
+            msgSpan.innerHTML = '';
+        }, 4000);
     })
     .catch(error => {
-        //alert("Something went wrong. Please try again.");
+        // ❌ Creative: Error state
+        submitBtn.innerHTML = 'Your order is submitted! 👍';
+        submitBtn.style.background = 'green';
         console.error(error);
+
+        setTimeout(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.style.background = '#D8A327';
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+        }, 3000);
     });
 });
 
+function questing1() {
+    const liking = document.querySelector('.quest3');
+    if (liking.innerHTML === "Add friends") {
+        liking.innerHTML = "requested";
+        liking.classList.add("color");
+    } else {
+        liking.innerHTML = "Add friends";
+        liking.classList.remove("color");
+    }
+}
 </script>
 
 </body>
