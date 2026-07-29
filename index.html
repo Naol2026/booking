@@ -196,9 +196,9 @@ for Farms, Businesses and Individuals.
 
     <section id="booking" class="booking">
         <h2>Customer Booking</h2>
-        <div class="hero">
+        <div class="heros">
         <form name = "YOUR_FORM_NAME">
-            <input type="name" name="Email" placeholder="enter your name" required>
+            <input type="name" name="Name" placeholder="enter your name" required>
             <input type="number" name="Phone" placeholder="your Phone number" required>
             
             <select class="products__selection" name="selection">
@@ -229,7 +229,92 @@ for Farms, Businesses and Individuals.
             <input type="date" name="Date" required>
             <button type="submit">Book Order</button>
         </form>
+        <span id="msg"></span>
         </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Our Marketing & Sales Team is ready to assist you with product inquiries and bookings.
+            </p>
+
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+
+                    <i class="fas fa-phone-alt"></i>
+
+                    <div>
+
+                        <h3>Call Us</h3>
+
+                        <p>+(251) 974-555-444</p>
+                        <p>0924422948</p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+
+                        <h3>Email</h3>
+
+                        <p>modjopoultry@gmail.com</p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+
+                        <h3>Address</h3>
+
+                        <p>Modjo, Ethiopia</p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                    <div>
+
+                        <h3>Facebook</h3>
+
+                        <a href="https://web.facebook.com/modjo.poultry.farm/?_rdc=1&_rdr#"
+                            target="_blank">
+                            Modjo Poultry Farm
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
     
 <footer>
@@ -240,17 +325,66 @@ for Farms, Businesses and Individuals.
 
 
  <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbwY3gT5dCb4kKQFlQFZ0MRyrflV4cM69mRU8phFk1iMPG_zuG6hKZzoFpHWDxkWNFit/exec'
-	const form = document.forms['YOUR_FORM_NAME']
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwY3gT5dCb4kKQFlQFZ0MRyrflV4cM69mRU8phFk1iMPG_zuG6hKZzoFpHWDxkWNFit/exec';
+const form = document.forms['YOUR_FORM_NAME'];
 
-	form.addEventListener('submit', e => {
-		e.preventDefault()
-		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-			.then(response => response.json())
-			.then(response => console.log('Success!', response))
-			.catch(error => console.error('Error!', error.message))
-	})
- </script>
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const product = formData.get('selection');
+    const quantity = formData.get('Quantity');
+
+    let unit = '';
+
+    switch (product) {
+        case 'Egg':
+            unit = 'pcs';
+            break;
+
+        case 'DOC':
+            unit = 'chicks';
+            break;
+
+        case 'Chicken Meat':
+            unit = 'kg';
+            break;
+
+        case 'Layer Starter Feed':
+        case 'Layer Grower Feed':
+        case 'Layer Finisher Feed':
+        case 'Broiler Starter Feed':
+        case 'Broiler Grower Feed':
+        case 'Broiler Finisher Feed':
+            unit = 'kg';
+            break;
+
+        default:
+            unit = '';
+    }
+
+    // Change Quantity to include the SI unit
+    if (unit !== '') {
+        formData.set('Quantity', `${quantity} ${unit}`);
+    }
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Booking submitted successfully!");
+        form.reset();
+    })
+    .catch(error => {
+        //alert("Something went wrong. Please try again.");
+        console.error(error);
+    });
+});
+
+</script>
 
 </body>
 </html>
