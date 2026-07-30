@@ -18,184 +18,339 @@ rel="stylesheet"
 
 <body>
 
-    <header class="header">
+    <!-- ================= HEADER ================= -->
 
-<nav class="navbar">
+<header class="header" id="header">
 
-<div class="logo">
+    <nav class="navbar">
 
-<img class="MPF__logo"  src="modjo poultry.jpg">
+        <a href="#" class="logo">
 
-<h2 class="main__title">MPF-sales and marketing dep't - 
-	Customer booking</h2>
+            <img src="modjo poultry.jpg" alt="Modjo Poultry Farm Logo">
 
-</div>
+            <div class="logo-text">
 
-<div class="nav__menu" id="nav-menu">
+                <h2>Modjo Poultry Farm</h2>
 
-	<ul class="nav__list">
+                <span>Marketing & Sales Portal</span>
 
-       <li class="nav__link"><a href="#">Home</a></li>
+            </div>
 
-        <li class="nav__link"><a href="#products">Products</a></li>
+        </a>
 
-        <li class="nav__link"><a href="#booking">Booking</a></li>
+        <ul class="nav-links" id="navLinks">
 
-        <li class="nav__link"><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="active">Home</a></li>
 
-	</ul>
+            <li><a href="#products">Products</a></li>
 
-	<!--close button-->
+            <li><a href="#booking">Booking</a></li>
 
-	<div class="nav__close" id="nav-close">
-		<i class="ri-close-large-line"></i>
-	</div>
+            <li><a href="#contact">Contact</a></li>
 
-	
-</div>
+        </ul>
 
-<div class="nav__toggle" id="nav-toggle">
-	<i class="ri-menu-line"></i>
-</div>
+        <div class="hamburger" id="hamburger">
 
-</nav>
+            <span></span>
+            <span></span>
+            <span></span>
 
-    </header>
+        </div>
 
-    <section class="hero">
+    </nav>
 
-<div class="overlay">
+</header>
 
-<h1>Fresh Poultry Products</h1>
+<!-- ================= HERO ================= -->
 
-<p>
-Premium Eggs, Chicken Meat and Quality Chicken Feed
-for Farms, Businesses and Individuals.
-</p>
+<section class="hero" id="home">
 
-<div class="buttons">
+    <div class="hero-overlay"></div>
 
-<a href="#booking" class="btn">Book Now</a>
+    <div class="hero-content">
 
-<a href="#products" class="btn2">View Products</a>
+        <span class="hero-badge">
 
-</div>
+            Since 2026
 
-</div>
+        </span>
 
-    </section>
+        <h1>
 
-    <section id="products" class="products">
+            Fresh Poultry Products <br>
 
-<h2>Our Products</h2>
+            Directly From The Farm
 
-<div class="cards">
+        </h1>
 
-<div class="card">
+        <p>
 
-<i class="fa-solid fa-egg"></i>
+            Premium Eggs, Chicken Meat, Day-Old Chicks,
+            Commercial Chickens and High Quality Poultry Feed
+            for retailers, wholesalers and commercial farms.
 
-<h3>Fresh Eggs</h3>
+        </p>
 
-<p>Farm fresh table eggs available daily.</p>
+        <div class="hero-buttons">
 
-</div>
+            <a href="#booking" class="primary-btn">
 
-<div class="card">
+                Book Order
 
-<i class="fas fa-kiwi-bird"></i>
+            </a>
 
-<h3>day old chickens</h3>
+            <a href="#products" class="secondary-btn">
 
-<p>day old chickens directly from farm</p>
+                Explore Products
 
-</div>
+            </a>
 
+        </div>
 
-<div class="card">
+        <div class="hero-stats">
 
-<i class="fas fa-dove"></i>
+            <div>
 
-<h3>commercial chickens</h3>
+                <h2>6+</h2>
 
-<p>healthy and ultra standard chickens for commercial uses</p>
+                <p>Products</p>
 
-</div>
+            </div>
 
-<div class="card">
+            <div>
 
-<i class="fa-solid fa-drumstick-bite"></i>
+                <h2>100%</h2>
 
-<h3>Chicken Meat</h3>
+                <p>Quality</p>
 
-<p>Fresh hygienically processed chicken.</p>
+            </div>
 
-</div>
+            <div>
 
-<div class="card">
+                <h2>24/7</h2>
 
-<i class="fa-solid fa-wheat-awn"></i>
+                <p>Support</p>
 
-<h3>Chicken Feed</h3>
+            </div>
 
-<ul>
+        </div>
 
-<li>Layer Starter Feed</li>
+    </div>
 
-<li>Layer Grower Feed</li>
+</section>
 
-<li>Layer Finisher Feed</li>
+    <!--================ PRODUCTS ================-->
 
-<li>Broiler Starter Feed</li>
+<section class="products section" id="products">
 
-<li>Broiler Grower Feed</li>
+    <div class="section-header">
 
-<li>Broiler Finisher Feed</li>
+        <span>OUR PRODUCTS</span>
 
-</ul>
+        <h2>Premium Poultry Products</h2>
 
-</div>
+        <p>
+            We provide high-quality poultry products for households,
+            retailers, wholesalers and commercial poultry farms.
+        </p>
 
-</div>
+    </div>
 
-    </section>
+    <div class="products-grid">
 
-    <section class="features">
+        <!-- Eggs -->
 
-<h2>Why Choose Us?</h2>
+        <article class="product-card">
 
-<div class="feature-box">
+            <div class="product-icon">
 
-<div>
+                <i class="fa-solid fa-egg"></i>
 
-<i class="fa-solid fa-award"></i>
+            </div>
 
-<h3>Premium Quality</h3>
+            <h3>Fresh Eggs</h3>
 
-</div>
+            <p>
+                Fresh table eggs collected daily from healthy laying hens.
+            </p>
 
-<div>
+            <span class="product-tag">Available Daily</span>
 
-<i class="fa-solid fa-leaf"></i>
+        </article>
 
-<h3>Healthy Products</h3>
+        <!-- Meat -->
 
-</div>
+        <article class="product-card">
 
-<div>
+            <div class="product-icon">
 
-<i class="fa-solid fa-headset"></i>
+                <i class="fa-solid fa-drumstick-bite"></i>
 
-<h3>24/7 Support</h3>
+            </div>
 
-</div>
+            <h3>Chicken Meat</h3>
 
-</div>
+            <p>
 
-    </section>
+                Hygienically processed premium chicken meat.
+
+            </p>
+
+            <span class="product-tag">Premium Quality</span>
+
+        </article>
+
+        <!-- DOC -->
+
+        <article class="product-card">
+
+            <div class="product-icon">
+
+                <i class="fas fa-kiwi-bird"></i>
+
+            </div>
+
+            <h3>Day Old Chicks</h3>
+
+            <p>
+
+                Healthy vaccinated chicks suitable for commercial production.
+
+            </p>
+
+            <span class="product-tag">Vaccinated</span>
+
+        </article>
+
+        <!-- Commercial -->
+
+        <article class="product-card">
+
+            <div class="product-icon">
+
+                <i class="fas fa-dove"></i>
+
+            </div>
+
+            <h3>3-Month Commercial Chickens</h3>
+
+            <p>
+
+                Strong, healthy commercial birds ready for production.
+
+            </p>
+
+            <span class="product-tag">Ready Stock</span>
+
+        </article>
+
+        <!-- Feed -->
+
+        <article class="product-card feed-card">
+
+            <div class="product-icon">
+
+                <i class="fa-solid fa-wheat-awn"></i>
+
+            </div>
+
+            <h3>Poultry Feed</h3>
+
+            <ul>
+
+                <li>Layer Starter Feed</li>
+
+                <li>Layer Grower Feed</li>
+
+                <li>Layer Finisher Feed</li>
+
+                <li>Broiler Starter Feed</li>
+
+                <li>Broiler Grower Feed</li>
+
+                <li>Broiler Finisher Feed</li>
+
+            </ul>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!--================ WHY US ================-->
+
+<section class="why section">
+
+    <div class="section-header">
+
+        <span>WHY MODJO POULTRY</span>
+
+        <h2>Why Choose Us?</h2>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h3>Premium Quality</h3>
+
+            <p>
+                Products produced under strict quality control standards.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-leaf"></i>
+
+            <h3>Healthy Production</h3>
+
+            <p>
+                Modern poultry management with hygienic production.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-seedling"></i>
+
+            <h3>Fresh Every Day</h3>
+
+            <p>
+
+                Daily fresh eggs, meat and poultry products.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Professional Team</h3>
+
+            <p>
+
+                Dedicated Marketing & Sales professionals ready to assist you.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
     <section id="booking" class="booking">
-        <h2>Customer Booking</h2>
+        <h2>Customer Booking Page</h2>
         <div class="heros">
         <form name = "YOUR_FORM_NAME">
             <input type="name" name="Name" placeholder="enter your name" required>
@@ -211,7 +366,7 @@ for Farms, Businesses and Individuals.
 
                 <option>whole chicken</option>
 
-				<option>45 days old chicken</option>
+                <option>45 days old chicken</option>
 
                 <option>3 month old chicken</option>
 
@@ -239,194 +394,357 @@ for Farms, Businesses and Individuals.
         </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
 
-    <section class="contact" id="contact">
+    <!--================ CONTACT =================-->
 
-        <div class="section-title">
+<section class="contact section" id="contact">
 
-            <h2>Contact Us</h2>
+    <div class="section-header">
+
+        <span>CONTACT</span>
+
+        <h2>Get In Touch</h2>
+
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fas fa-phone"></i>
+
+            <h3>Phone</h3>
+
+            <p>+(251) 974-555-444</p>
+
+            <p>0924422948</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fas fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>modjopoultry@gmail.com</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fas fa-location-dot"></i>
+
+            <h3>Address</h3>
+
+            <p>Modjo, Ethiopia</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fab fa-facebook-f"></i>
+
+            <h3>Facebook</h3>
+
+            <a href="https://web.facebook.com/modjo.poultry.farm/?_rdc=1&_rdr#"
+               target="_blank">
+
+                Modjo Poultry Farm
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+    
+<!--================ FOOTER =================-->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>Modjo Poultry Farm</h2>
 
             <p>
-                Our Marketing & Sales Team is ready to assist you with product inquiries and bookings.
+
+                Marketing & Sales Department
+
             </p>
 
         </div>
 
-        <div class="contact-container">
+        <div class="footer-links">
 
-            <div class="contact-card">
+            <a href="#home">Home</a>
 
-                <div class="contact-item">
+            <a href="#products">Products</a>
 
-                    <i class="fas fa-phone-alt"></i>
+            <a href="#booking">Booking</a>
 
-                    <div>
-
-                        <h3>Call Us</h3>
-
-                        <p>+(251) 974-555-444</p>
-                        <p>0924422948</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <i class="fas fa-envelope"></i>
-
-                    <div>
-
-                        <h3>Email</h3>
-
-                        <p>modjopoultry@gmail.com</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <i class="fas fa-location-dot"></i>
-
-                    <div>
-
-                        <h3>Address</h3>
-
-                        <p>Modjo, Ethiopia</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <i class="fab fa-facebook-f"></i>
-
-                    <div>
-
-                        <h3>Facebook</h3>
-
-                        <a href="https://web.facebook.com/modjo.poultry.farm/?_rdc=1&_rdr#"
-                            target="_blank">
-                            Modjo Poultry Farm
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <a href="#contact">Contact</a>
 
         </div>
 
-    </section>
-    
-<footer>
+    </div>
 
-  <p>© 2026 Modjo Poultry Farm. All Rights Reserved.</p>
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Modjo Poultry Farm. All Rights Reserved.
+
+    </p>
 
 </footer>
 
+
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwY3gT5dCb4kKQFlQFZ0MRyrflV4cM69mRU8phFk1iMPG_zuG6hKZzoFpHWDxkWNFit/exec';
-const form = document.forms['YOUR_FORM_NAME'];
-const submitBtn = form.querySelector('button[type="submit"]');
-const originalBtnText = submitBtn.innerHTML;
+    const hamburger=document.getElementById("hamburger");
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
+    const nav=document.getElementById("navLinks");
 
-    const formData = new FormData(form);
-    const product = formData.get('selection');
-    const quantity = formData.get('Quantity');
+    hamburger.onclick=()=>{
 
-    let unit = '';
-    switch (product) {
-        case 'Egg': unit = 'pcs'; break;
-        case 'DOC': unit = 'chicks'; break;
-        case 'whole chicken': unit = 'kg'; break;
-	    case '45 days old chicken': unit = 'chicks'; break;
-		case '3 month old chicken': unit = 'chicks'; break;
-		case '60 days old chicken': unit = 'chicks'; break;
-        case 'Layer Starter Feed':
-        case 'Layer Grower Feed':
-        case 'Layer Finisher Feed':
-        case 'Broiler Starter Feed':
-        case 'Broiler Grower Feed':
-        case 'Broiler Finisher Feed':
-            unit = 'kg'; break;
-        default: unit = '';
-    }
+    nav.classList.toggle("show");
 
-    if (unit !== '') {
-        formData.set('Quantity', `${quantity} ${unit}`);
-    }
+    };
 
-    // 🚀 Creative: Loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Sending to the farm... 🚜';
-    submitBtn.style.opacity = '0.8';
 
-    fetch(scriptURL, { method: 'POST', body: formData })
-    .then(response => response.json())
-    .then(data => {
-        // ✅ Creative: Success state — exactly as you requested!
-        submitBtn.innerHTML = 'Your order is submitted! 👍';
-        submitBtn.style.background = '#28a745'; // Fresh green
-        submitBtn.style.transform = 'scale(1.05)';
-        submitBtn.style.boxShadow = '0 8px 25px rgba(40, 167, 69, 0.4)';
-        
-        // Fun confirmation message below the form
-        const msgSpan = document.getElementById('msg');
-        msgSpan.innerHTML = '🎉 Fresh from Modjo to you! We\'ll call you soon.';
-        msgSpan.style.color = '#28a745';
-        msgSpan.style.fontWeight = 'bold';
-        msgSpan.style.marginTop = '15px';
-        msgSpan.style.display = 'block';
-        msgSpan.style.textAlign = 'center';
-        msgSpan.style.animation = 'popIn 0.4s ease';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwY3gT5dCb4kKQFlQFZ0MRyrflV4cM69mRU8phFk1iMPG_zuG6hKZzoFpHWDxkWNFit/exec';
+    const form = document.forms['YOUR_FORM_NAME'];
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
 
-        form.reset();
+    form.addEventListener('submit', e => {
+        e.preventDefault();
 
-        // ⏳ Reset after 4 seconds so they can book again
-        setTimeout(() => {
-            submitBtn.innerHTML = originalBtnText;
-            submitBtn.style.background = '#D8A327';
-            submitBtn.style.transform = 'scale(1)';
-            submitBtn.style.boxShadow = 'none';
-            submitBtn.style.opacity = '1';
-            submitBtn.disabled = false;
-            msgSpan.innerHTML = '';
-        }, 4000);
-    })
-    .catch(error => {
-        // ❌ Creative: Error state
-        submitBtn.innerHTML = 'Your order is submitted! 👍';
-        submitBtn.style.background = 'green';
-        console.error(error);
+        const formData = new FormData(form);
+        const product = formData.get('selection');
+        const quantity = formData.get('Quantity');
 
-        setTimeout(() => {
-            submitBtn.innerHTML = originalBtnText;
-            submitBtn.style.background = '#D8A327';
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = '1';
-        }, 3000);
+        let unit = '';
+        switch (product) {
+            case 'Egg': unit = 'pcs'; break;
+            case 'DOC': unit = 'chicks'; break;
+            case 'Chicken Meat': unit = 'kg'; break;
+            case '45 days old chickens': unit = 'chicks'; break;
+            case '60 days old chickens': unit = 'chicks'; break;
+            case '3 month days old chickens': unit = 'chicks'; break;
+            case 'Layer Starter Feed':
+            case 'Layer Grower Feed':
+            case 'Layer Finisher Feed':
+            case 'Broiler Starter Feed':
+            case 'Broiler Grower Feed':
+            case 'Broiler Finisher Feed':
+                unit = 'kg'; break;
+            default: unit = '';
+        }
+
+        if (unit !== '') {
+            formData.set('Quantity', `${quantity} ${unit}`);
+        }
+
+        // 🚀 Creative: Loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending to the farm... 🚜';
+        submitBtn.style.opacity = '0.8';
+
+        fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => response.json())
+        .then(data => {
+            // ✅ Creative: Success state — exactly as you requested!
+            submitBtn.innerHTML = 'Your order is submitted! 👍';
+            submitBtn.style.background = '#28a745'; // Fresh green
+            submitBtn.style.transform = 'scale(1.05)';
+            submitBtn.style.boxShadow = '0 8px 25px rgba(40, 167, 69, 0.4)';
+            
+            // Fun confirmation message below the form
+            const msgSpan = document.getElementById('msg');
+            msgSpan.innerHTML = '🎉 Fresh from Modjo to you! We\'ll call you soon.';
+            msgSpan.style.color = '#28a745';
+            msgSpan.style.fontWeight = 'bold';
+            msgSpan.style.marginTop = '15px';
+            msgSpan.style.display = 'block';
+            msgSpan.style.textAlign = 'center';
+            msgSpan.style.animation = 'popIn 0.4s ease';
+
+            form.reset();
+
+            // ⏳ Reset after 4 seconds so they can book again
+            setTimeout(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.style.background = '#D8A327';
+                submitBtn.style.transform = 'scale(1)';
+                submitBtn.style.boxShadow = 'none';
+                submitBtn.style.opacity = '1';
+                submitBtn.disabled = false;
+                msgSpan.innerHTML = '';
+            }, 4000);
+        })
+        .catch(error => {
+            // ❌ Creative: Error state
+            submitBtn.innerHTML = 'Your order is submitted! 👍';
+            submitBtn.style.background = 'green';
+            console.error(error);
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.style.background = '#D8A327';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            }, 3000);
+        });
     });
+
+    
+    /*==========================================
+    MOBILE NAVIGATION
+==========================================*/
+
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
+const header = document.querySelector(".header");
+
+/*-------------------------
+Open / Close Menu
+-------------------------*/
+
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+
 });
 
-function questing1() {
-    const liking = document.querySelector('.quest3');
-    if (liking.innerHTML === "Add friends") {
-        liking.innerHTML = "requested";
-        liking.classList.add("color");
-    } else {
-        liking.innerHTML = "Add friends";
-        liking.classList.remove("color");
+/*-------------------------
+Close Menu After Clicking
+-------------------------*/
+
+navItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("show");
+
+    });
+
+});
+
+/*-------------------------
+Close Menu When Clicking Outside
+-------------------------*/
+
+document.addEventListener("click", function(e){
+
+    if(
+        !navLinks.contains(e.target) &&
+        !hamburger.contains(e.target)
+    ){
+
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("show");
+
     }
-}
-</script>
+
+});
+
+/*-------------------------
+Sticky Navbar Shadow
+-------------------------*/
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 60){
+
+        header.classList.add("scroll-header");
+
+    }
+
+    else{
+
+        header.classList.remove("scroll-header");
+
+    }
+
+});
+
+/*-------------------------
+Active Navigation Link
+-------------------------*/
+
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+
+        const sectionHeight = section.offsetHeight;
+
+        const sectionTop = section.offsetTop - 120;
+
+        const sectionId = section.getAttribute("id");
+
+        const currentLink = document.querySelector(
+            '.nav-links a[href="#' + sectionId + '"]'
+        );
+
+        if(
+            scrollY > sectionTop &&
+            scrollY <= sectionTop + sectionHeight
+        ){
+
+            currentLink.classList.add("active");
+
+        }
+
+        else{
+
+            currentLink.classList.remove("active");
+
+        }
+
+    });
+
+});
+
+/*-------------------------
+Smooth Scroll
+-------------------------*/
+
+navItems.forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
+
+        window.scrollTo({
+
+            top: target.offsetTop - 70,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
+
+
+
+    
+    </script>
 
 </body>
 </html>
