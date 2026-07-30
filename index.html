@@ -349,7 +349,7 @@ rel="stylesheet"
 
 </section>
 
-    <section id="booking" class="booking">
+   <!-- <section id="booking" class="booking">
         <h2>Customer Booking Page</h2>
         <div class="heros">
         <form name = "YOUR_FORM_NAME">
@@ -366,11 +366,11 @@ rel="stylesheet"
 
                 <option>whole chicken</option>
 
-                <option>45 days old chickens</option>
+                <option>45 days old chicken</option>
 
-                <option>60 days old chickens</option>
+                <option>3 month old chicken</option>
 
-			    <option>3 month old chickens</option>
+                <option>60 days old chicken</option>
 
                 <option>Layer Starter Feed</option>
 
@@ -396,7 +396,154 @@ rel="stylesheet"
 
 
     <!--================ CONTACT =================-->
+ 
+    <!--================ BOOKING =================-->
 
+<section class="booking section" id="booking">
+
+    <div class="section-header">
+
+        <span>BOOK NOW</span>
+
+        <h2>Customer Booking</h2>
+
+        <p>
+            Fill out the booking form below and our Marketing & Sales Team
+            will contact you as soon as possible.
+        </p>
+
+    </div>
+
+    <div class="booking-container">
+
+        <!--================ FORM =================-->
+
+        <div class="booking-form">
+
+            <form name="YOUR_FORM_NAME">
+
+                <div class="input-group">
+
+                    <input type="text"
+                           name="Name"
+                           placeholder="Full Name"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <input type="number"
+                           name="Phone"
+                           placeholder="Phone Number"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <select name="selection" required>
+
+                        <option>Select Product</option>
+
+                        <option>Egg</option>
+
+                        <option>DOC</option>
+
+                        <option>Chicken Meat</option>
+
+                        <option>45 days old chickens</option>
+
+                        <option>60 days old chickens</option>
+
+                        <option>3 month old chickens</option>
+
+                        <option>Layer Starter Feed</option>
+
+                        <option>Layer Grower Feed</option>
+
+                        <option>Layer Finisher Feed</option>
+
+                        <option>Broiler Starter Feed</option>
+
+                        <option>Broiler Grower Feed</option>
+
+                        <option>Broiler Finisher Feed</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <input type="number"
+                           name="Quantity"
+                           placeholder="Quantity"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <input type="date"
+                           name="Date"
+                           required>
+
+                </div>
+
+                <button type="submit">
+
+                    Book Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!--================ INFO =================-->
+
+        <div class="booking-info">
+
+            <h3>Why Book With Us?</h3>
+
+            <div class="info-item">
+
+                <i class="fas fa-circle-check"></i>
+
+                <p>Farm Fresh Poultry Products</p>
+
+            </div>
+
+            <div class="info-item">
+
+                <i class="fas fa-circle-check"></i>
+
+                <p>Healthy & Hygienic Production</p>
+
+            </div>
+
+            <div class="info-item">
+
+                <i class="fas fa-circle-check"></i>
+
+                <p>Premium Feed Products</p>
+
+            </div>
+
+            <div class="info-item">
+
+                <i class="fas fa-circle-check"></i>
+
+                <p>Professional Marketing & Sales Team</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <section class="contact section" id="contact">
 
     <div class="section-header">
@@ -531,10 +678,10 @@ rel="stylesheet"
         switch (product) {
             case 'Egg': unit = 'pcs'; break;
             case 'DOC': unit = 'chicks'; break;
-            case 'whole chicken': unit = 'kg'; break;
+            case 'Chicken Meat': unit = 'kg'; break;
             case '45 days old chickens': unit = 'chicks'; break;
             case '60 days old chickens': unit = 'chicks'; break;
-            case '3 month days old chickens': unit = 'chicks'; break;
+            case '3 month old chickens': unit = 'chicks'; break;
             case 'Layer Starter Feed':
             case 'Layer Grower Feed':
             case 'Layer Finisher Feed':
