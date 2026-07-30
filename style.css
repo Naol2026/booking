@@ -185,23 +185,16 @@ transition:.3s;
 
 
 .hero{
-
-height:100vh;
-
-background:url("modjo poultry.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-position:relative;
-
+    min-height:100vh;
+    padding-top:85px;     /* Same height as navbar */
+    background:url("modjo poultry.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding-top:110px;
 }
 
 .hero-overlay{
